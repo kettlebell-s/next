@@ -1,0 +1,55 @@
+@import "../../assets/scss/helpers/variables.scss";
+
+.textarea {
+  width: 100%;
+  color: $dark;
+  font-weight: 400;
+  font-size: 16px;
+  outline: 0;
+  padding: 10px 12px;
+  border-radius: 4px;
+  position: relative;
+  width: 544px;
+  height: 128px;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0 0 0 1px rgba(107, 119, 140, 0.3);
+  box-shadow: 0 0 0 1px rgba(107, 119, 140, 0.3);
+  transition: color 0.3s, box-shadow 0.3s, border 0.3s;
+  resize: none;
+
+  &.error {
+    border-color:$red;
+    box-shadow: 0 0 0 1px $red;
+  }
+
+  &.textareaResize {
+    resize: initial;
+  }
+
+  &::placeholder {
+    color: $gray;
+  }
+
+  &:hover:not([disabled]):not(:focus):not(.error)  {
+    border: 1px solid rgba(107, 119, 140, 0.5);
+    box-shadow: 0 0 0 1px rgba(107, 119, 140, 0.5);
+  }
+
+  &:focus:not([disabled]) {
+    border-color: $blue;
+    box-shadow: 0 0 0 1px $blue; 
+  }
+
+  &[disabled] {
+    border: 1px solid rgba(107, 119, 140, 0.06);
+    background-color: rgba(107, 119, 140, 0.06);
+    color: $gray;
+  }
+}
+
+.textError {
+  font-weight: 400;
+  font-size: 12px;
+  color: $red;
+  margin-top: 4px;
+}

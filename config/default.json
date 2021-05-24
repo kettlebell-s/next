@@ -1,0 +1,12 @@
+{
+  "API_URL": "https://....",
+  "IS_PROD": false,
+  "REDUX_DEBUG": false,
+  "CSRF_TOKEN": "to6CL2jKiDbKEMm0uqW-KCVg",
+  "I18N_CONFIG": {
+    "i18n": {
+      "defaultLocale": "en",
+      "locales": ["en", "vi", "zh-CN"]
+    }
+  }
+}

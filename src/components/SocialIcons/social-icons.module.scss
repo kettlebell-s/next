@@ -1,0 +1,50 @@
+@import '../../assets/scss/helpers/variables.scss';
+
+.wrapper {
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  display: flex;
+  position: relative;
+  padding: 4px;
+  border: 1px solid transparent;
+  transition: border 0.3s;
+
+  g {
+    transition: opacity 0.3s;
+  }
+
+  path {
+   transition: fill 0.3;
+  }
+
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    g {
+      opacity: 1;
+    }
+
+    path {
+      fill: $white;
+    }
+  }
+
+  &:hover {
+    g {
+      opacity: 0,7;
+    }
+  }
+
+  &:global(.focus-visible) {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}

@@ -1,0 +1,56 @@
+@import "../../../assets/scss/helpers/variables.scss";
+
+.container {
+  cursor: pointer;
+  width: 100%;
+  min-height: 90px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  box-sizing: border-box;
+  border-radius: 6px;
+  outline: none;
+  color: $gray;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  display: block;
+  margin: 28px 23px 28px 28px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.title {
+  max-width: 380px;
+  margin: 0px;
+  color: $dark;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.subtitle {
+  color: $gray;
+}
+
+.remove {
+  margin-left: auto;
+  background-color: transparent;
+  border: 0px;
+  svg {
+    width: 24px;
+    height: 24px;
+    margin: 32px 16px;
+  }
+}

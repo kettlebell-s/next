@@ -1,0 +1,94 @@
+@import "../../assets/scss/helpers/variables.scss";
+
+.wrapper {
+  width: 530px;
+  position: relative;
+}
+
+.label {
+  margin-bottom: 4px;
+}
+
+.container {
+  width: 100%;
+  max-height: 90px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $lightGray;
+  border: 1px dashed rgba(107, 119, 140, 0.3);
+  box-sizing: border-box;
+  border-radius: 6px;
+  outline: none;
+  color: $gray;
+
+  &:hover {
+    border-color: rgba(107, 119, 140, 0.5);
+  }
+
+  &:active {
+    border-color: rgba(107, 119, 140, 0.5);
+    color: rgba(107, 119, 140, 0.7);
+  }
+
+  &.drag,
+  &.loading  {
+    background-color: $white;
+    border-color: $blue;
+  }
+
+  &.selected {
+    border: 1px solid rgba(107, 119, 140, 0.3);
+  }
+}
+
+.input {
+  display: none;
+}
+
+.text {
+  color: $gray;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.message {
+  width: 100%;
+  min-height: 90px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $blue;
+  border-color: $blue;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+}
+
+.loading {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 1.5px solid rgba(78, 135, 247, 0.2);
+  border-radius:  50%;
+  border-top-color: $blue;
+  animation: spin 2s linear 0s infinite;
+  margin-bottom: 8px;
+}
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}

@@ -1,0 +1,28 @@
+@import '../../../assets/scss/helpers/variables.scss';
+
+.container {
+  position: absolute;
+  z-index: 2;
+  top: calc(100% + 2px);
+  left: 0;
+  width: 100%;
+  background: $white;
+  box-shadow: 0px 2px 6px rgba(0, 24, 71, 0.08);
+  border-radius: 4px;
+  padding: 2px;
+  min-width: 100px;
+  max-height: 240px;
+  overflow: auto;
+
+  &.right {
+    left: auto;
+    right: 0;
+  }
+
+  &.top {
+    bottom: 100%;
+    margin-bottom: 4px;
+    padding-top: 0;
+    top: auto;
+  }
+}

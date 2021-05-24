@@ -1,0 +1,25 @@
+@import "./vendors/normalize.scss";
+@import "./helpers/fonts.scss";
+
+html, body, #__next {
+  height: 100%;
+}
+
+body, button {
+  font-family: 'Inter';
+}
+
+button {
+  border: 0;
+  outline: 0;
+  padding: 0;
+  background-color: transparent;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+p {
+  margin: 0;
+}

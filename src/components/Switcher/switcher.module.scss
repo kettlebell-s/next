@@ -1,0 +1,76 @@
+@import "../../assets/scss/helpers/variables.scss";
+
+.wrapper {    
+  width: 44px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 40px;
+  height: 20px;
+  background: $gray;
+  border-radius: 10px;
+  position: relative;
+  transition: background-color .2s;  
+
+  &.checked {
+    background: $blue;
+  }
+  
+  &.disabled {    
+    background: $gray;
+    opacity: 0.5;            
+    cursor: default;
+  }
+
+  &:hover:not(.disabled) {
+    opacity: 0.8;
+  }
+
+  &:focus-within:not(.disabled) {
+    box-shadow: 0 0 0 1px $gray; 
+    border-radius: 10px;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      box-shadow: 0 0 0 1px $lightGray; 
+      border-radius: 10px;
+    }
+  }
+}
+
+.checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  
+  &:checked + .icon  {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+  }  
+}
+
+.icon {
+  position: absolute;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transition: 0.2s;
+  background: $white;
+}

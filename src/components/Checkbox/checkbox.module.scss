@@ -1,0 +1,95 @@
+@import '../../assets/scss/helpers/variables.scss';
+
+.wrapper {
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+  align-items: center;
+  width: auto;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 0 5px 0 3px;
+  outline: 0;
+  min-height: 22px;
+
+  &:hover:not(.disabled) {
+    .checkbox {
+      & + .icon {
+        border: 2px solid rgba(107, 119, 140, 0.5);
+
+        &:before {
+          background-image: url("../../assets/images/icons/check.svg");
+        }
+      }
+
+      &:checked + .icon {
+        border: 2px solid $blue;
+    
+        &:before {
+          background-image: url("../../assets/images/icons/check-white.svg");
+        }
+      }
+    } 
+  }
+
+  &:global(.focus-visible) {
+    border: 1px solid rgba(107, 119, 140, 0.5);
+  }
+
+  &.disabled {
+    opacity: 0.5;
+
+    .checkbox:checked + .icon {
+      background-color: $gray;
+      border-color: $gray;
+    }
+  }
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+
+  &:checked + .icon {
+    background-color: $blue;
+    border: 2px solid $blue;
+
+    &:before {
+      background-image: url("../../assets/images/icons/check-white.svg");
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+
+.icon {
+  position: relative;
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 2px solid rgba(107, 119, 140, 0.3);
+  display: block;
+
+  &:before {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.labelArea {
+  margin-left: 8px;
+  color: $dark;
+  font-size: 14px;
+  line-height: 140%;
+}

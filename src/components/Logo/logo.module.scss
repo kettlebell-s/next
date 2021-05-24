@@ -1,0 +1,28 @@
+@import "../../assets/scss/helpers/variables.scss";
+
+.wrapper {
+  padding: 2px 10px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  display: inline-flex;
+  transition: background-color 0.3s, border 0.3s;
+
+  &:hover {
+    background-color: #F9FAFC;
+  }
+
+  &:active {
+    opacity: 0.5;
+    background-color: transparent;
+  }
+
+  &:global(.focus-visible) {
+    border: 1px solid rgba(107, 119, 140, 0.5);
+  }
+
+  .logo {
+    max-height: 100%;
+    object-fit: contain;
+  }
+}

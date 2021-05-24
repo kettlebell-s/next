@@ -1,0 +1,79 @@
+@import "../../assets/scss/helpers/variables.scss";
+
+.containerWrapper {
+  position: relative;
+}
+
+.textLabel {
+  font-size: 14px;
+  color: $dark;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.inputWrapper {
+  border: 1px solid rgba(107, 119, 140, 0.3);
+  border-radius: 4px;
+  position: relative;
+  outline: 0;
+  transition: color 0.3s, box-shadow 0.3s, border 0.3s;
+  display: flex;
+  align-items: center;
+  background:#fff;
+  height: 44px;
+
+  &.error {
+    border-color:$red;
+    box-shadow: 0 0 0 1px $red;
+  }
+
+  &:focus-within {
+    border-color: $blue;
+    box-shadow: 0 0 0 1px $blue;  
+  }
+
+  &:hover:not([data-disabled]):not(:focus-within):not(.error)  {
+    border: 1px solid rgba(107, 119, 140, 0.5);
+    box-shadow: 0 0 0 1px rgba(107, 119, 140, 0.5);
+  }
+
+  &[data-disabled] {
+    background-color: rgba(107, 119, 140, 0.06);
+    border: 1px solid rgba(107, 119, 140, 0.06);
+    color: $gray;
+  }
+}
+
+.input {
+  font-size: 16px;
+  width: 100%;
+  color: $dark;
+  font-weight: 400;
+  outline: 0;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 4px;
+  height: 44px;
+  max-height: 100%;
+  background-color: transparent;
+
+  &::placeholder {
+    color: $gray;
+  }
+}
+
+.textError {
+  font-weight: 400;
+  font-size: 12px;
+  color: $red;
+  margin-top: 4px;
+
+  &.errorPositionAbsolute {
+    position: absolute;
+    top: 100%;
+  }
+}
+
+.rightContent {
+  padding-right: 12px;
+}
